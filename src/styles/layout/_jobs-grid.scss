@@ -1,0 +1,68 @@
+@import 'abstracs/variables';
+@import 'abstracs/mixins';
+
+.card-content {
+    // border: 1px solid red;
+
+    width: 100%;
+    max-width: 1024px;
+    margin: 3rem  auto 2.5rem auto;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(320px, 1fr));
+    justify-items: center;
+    gap: 2.5rem 1rem;
+
+
+}
+
+.card {
+    width: 330px;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    cursor: pointer;
+    
+    background-color: var(--elements-primary-color);
+    border-radius: 5px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    &__logo {
+        position: absolute;
+        top: -20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 0.7rem;
+
+       .text__logo {
+        text-align: center;
+        @include base-cardText(#333, kumbhBold );
+
+       }
+    }
+
+    .text__time {
+        margin-top: 2.5rem;
+        @include base-cardText($gray--dark, inherit );
+    }
+
+    .text__company {
+        
+        @include base-cardText($gray--dark, inherit );
+
+    }
+
+    .text__position {
+        // height: 43px;
+        @include base-cardText(var(--text-primary-color), kumbhBold);
+    }
+
+    .text__direction {
+        margin-top: 1rem;
+        @include base-cardText( $viloet, kumbhBold)
+    }
+}
+

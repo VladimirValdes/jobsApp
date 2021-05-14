@@ -1,0 +1,27 @@
+@import "abstracs/mixins";
+
+main {
+    padding: 0 1rem;
+    position: absolute;
+
+    top: 110px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.filters {
+    width: 100%;
+}
+
+.btn-seccion {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-load {
+    @include base-button(15px,15px);
+}

@@ -1,0 +1,68 @@
+
+<main>
+    <section class="filters">
+ 
+    <form class="desk-filter" [formGroup]="forma" (ngSubmit)="guardar()">
+        <div class="filter-search">
+            <span class="filter-search__icon filter-search__icon--loupe">
+                <i class="fas fa-search"></i>
+            </span>
+            
+            <input class="filter-search__input"
+                   type="search" 
+                   placeholder="Filter by title..."
+                   formControlName="descripcion">
+
+           
+        </div>
+
+        <span class="mobile-filter__icon"
+              (click)="activeM()">
+                <i class="fas fa-filter"></i>
+        </span>
+
+        <div class="filter-search filter-search--location">
+            <span class="filter-search__icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </span>
+
+            <input class="filter-search__input" 
+                   type="search" 
+                   placeholder="Filter by location..."
+                   formControlName="location">
+        </div>
+        <div class="filter-search filter-search--nBorder">
+
+            <label class="container container--checkbox">
+                <input type="checkbox"
+                       formControlName="fullTime">
+                <span class="checkmark"></span>
+            </label>
+            <label class="filter-search__text filter-search__text--time">Full time </label>
+            <button class="filter-search__btn"
+                    [disabled]="enable"
+                    type="submit">
+                    Search
+            </button>
+        </div>
+    </form>
+    </section>
+
+    <app-jobs-grid [jobs]="jobs" *ngIf="!loading"></app-jobs-grid>
+    
+    <section class="btn-seccion"
+             *ngIf="!loading">
+        <button class="btn-load"
+                *ngIf="showBtn"
+                (click)="loadJobs()"
+                type="button">
+                Load More
+            </button>
+    </section>
+    <app-modal [modalActive]="activeModal" (modalActiveChanged)="activeModal = $event" (guardar)="guardar()" (fields)="fieldsModal = $event"></app-modal>
+
+
+    <app-loading *ngIf="loading"></app-loading>
+</main>
+
+

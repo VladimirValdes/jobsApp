@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  url: 'https://jobs.github.com'
+
 };

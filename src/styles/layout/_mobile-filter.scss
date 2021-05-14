@@ -1,0 +1,33 @@
+@import 'abstracs/variables';
+@import 'abstracs/mixins';
+
+
+.mobile-filter{
+    margin: 0 auto;
+    width: 335px;
+    height: 75px;
+    border-radius: 5px;
+    padding: 0 1rem;
+    background-color: var(--elements-primary-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__search{
+        width: 65%;
+        @include base-filter();
+    
+    }
+
+    &__icon {
+        @include base-icon($gray--dark, 20px);
+    }
+
+    &__btn {
+
+        @include base-button(14px, 15px);
+
+    }
+}

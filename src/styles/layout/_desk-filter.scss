@@ -1,0 +1,63 @@
+@import 'abstracs/variables';
+@import 'abstracs/mixins';
+
+
+.desk-filter {
+    margin: 0 auto;
+    width: 340px;
+    
+    height: 75px;
+
+    border-radius: 5px;
+    background-color: var(--elements-primary-color);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+
+.filter-search{
+    height: 70px;
+    border: none;
+    // padding: 0 0.5rem;
+
+
+    display: flex;
+    align-items: center;
+
+    &--location {
+       display: none;
+    }
+
+
+    &__icon {
+        padding: 0 0.5rem 0 0;
+        @include base-icon($viloet, 20px);
+
+        &--loupe {
+            display: none
+        }
+
+    }
+
+
+    &__input {
+        @include base-filter();
+    }
+
+    &__text {
+        @include base-cardText(var(--text-primary-color), kumbhBold);
+
+        &--time {
+            display: none;
+        }
+    }
+
+    &__btn {
+
+        @include base-button(15px, 20px);
+
+    }
+}

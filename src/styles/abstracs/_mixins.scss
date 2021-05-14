@@ -1,0 +1,71 @@
+@import 'abstracs/variables';
+
+
+@mixin base-icon($color, $font) {
+    color: $color;
+    font-size: $font;
+}
+
+@mixin base-cardText ( $color, $font ) {
+    color: $color;
+    font-family: $font;
+}
+
+
+@mixin base-Linkbtn($horizontal, $vertical, $color, $bk) {
+    @content;
+
+    &:link, &:visited{
+        display: inline-block;
+        padding: $vertical $horizontal;
+
+        font-family: kumbhBold;
+        text-align: center;
+        text-decoration: none;
+        color: $color;
+
+        background-color: $bk;
+        border-radius: 5px;
+
+    }
+
+    &:hover {
+        background-color: $viloet--light;
+        color: $gray--light;
+    }
+
+   
+}
+
+@mixin base-button($horizontal, $vertical) {
+    @content;
+
+    font-family: kumbhBold;
+    padding: $horizontal $vertical;
+    background-color: $viloet;
+    color: $gray--light;
+    border-radius: 5px;
+    border: none;
+
+    &:hover {
+        background-color: $viloet--light;
+    }
+
+    &:disabled {
+        background-color: $gray--dark;
+    }
+}
+
+@mixin base-filter() {
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: $gray--dark;
+
+    &::placeholder {
+        color:$gray--dark;
+        opacity: 1;
+    }
+    
+}

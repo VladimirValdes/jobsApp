@@ -1,0 +1,27 @@
+
+@mixin  tablet($breakpoint-tablet) {
+    
+    @media screen  and (min-width: $breakpoint-tablet) {
+
+            header{
+                background-image: url('../../assets/images/desktop/bg-pattern-header.svg');
+
+                .filters {
+                    padding: 0 2rem;
+
+                }
+                
+
+            }
+
+            .mobile-filter {
+                display: none;
+            }
+
+            .desk-filter {
+                display: flex;
+                flex-direction: row;
+            }
+
+    }
+}

@@ -1,0 +1,66 @@
+@mixin  tablet($breakpoint-tablet) {
+    
+    @media screen  and (min-width: $breakpoint-tablet) {
+
+            main{
+
+                .filters {
+                    padding: 0 0.5rem;
+
+                }
+                
+
+            }
+
+            .desk-filter {
+                width: 100%;
+                max-width: 1024px;
+                
+                .filter-search {
+
+                    border-right: 0.5px solid $viloet--light;
+                    flex-grow: 1;
+
+                    
+                    &--location {
+                        padding-left: 1rem;
+                        display: flex;
+                        align-items: center;
+
+                    }
+
+                    &--nBorder {
+                        border-right: none;
+                        justify-content: space-around;
+                        flex-grow: 0;
+                        flex-basis: 250px;
+                   
+                    }
+
+                    .container {
+                        display: block;
+
+                    }
+
+
+
+                    &__icon--loupe {
+                        padding-left: 1rem;
+                        display: block;
+                    }
+
+                    &__text--time {
+                        display: block;
+                    }
+                }
+
+                
+                .mobile-filter__icon {
+                    display: none;
+                }
+
+
+            }
+
+    }
+}

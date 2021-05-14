@@ -1,0 +1,23 @@
+@import 'themes/base-colors';
+@import 'themes/functions';
+
+@import 'base/reset';
+@import 'base/typography';
+
+body {
+
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+    background-color: var(--background-primary-color);
+
+
+    font-size: $font-s;
+    font-family: kumbhLigth, sans-serif;
+    color: var(--text-primary-color);
+
+
+}

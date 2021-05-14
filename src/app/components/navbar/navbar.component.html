@@ -1,0 +1,22 @@
+<header>
+    <div class="elements">
+        <a [routerLink]="['/home']" class="title-app">devjobs</a>
+        <div class="switch">
+            <span class="switch__icon"><i class="fas fa-sun"></i></span>
+            <label  class="switch-btn">
+                <input type="checkbox" 
+                      class="checkbox"
+                      checked ="check"
+                      #active
+                      (click) = "siwtchActive( active.checked )"
+                      >
+                <span class="toogle-thumb"></span>
+            </label>
+            <span class="switch__icon"><i class="fas fa-moon"></i></span>   
+
+        </div>
+        
+    </div>
+</header>
+
+

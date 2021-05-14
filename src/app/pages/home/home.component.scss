@@ -1,0 +1,7 @@
+@import 'pages/home';
+@import 'layout/mobile-filter';
+@import 'layout/desk-filter';
+@import 'layout/checkbox';
+@import 'responsive/home-responsive';
+
+@include tablet(690px);

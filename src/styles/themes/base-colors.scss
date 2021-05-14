@@ -1,0 +1,34 @@
+
+$text-primary-color:hsl(219, 29%, 14%);
+$text-primary-color-dark: hsl(0, 0%, 100%);
+
+$background-primary-color:hsl(210, 22%, 96%);
+$background-primary-color-dark: hsl(220, 29%, 10%);
+
+$elements-primary-color: hsl(0, 0%, 100%);
+$elements-primary-color-dark: hsl(219, 29%, 14%);
+
+$load-primary-color:  hsl(219, 29%, 14%);
+$load-primary-color-dark: hsl(0, 0%, 100%);
+
+
+
+// $shadow-primary-color: hsl(0, 0%, 75%);
+// $shadow-primary-color-dark: rgba(0, 0, 0, 0.5); 
+
+// $loading-primary-color: hsl(209, 23%, 22%);
+// $loading-primary-color-dark:hsl(0, 0%, 100%);
+
+
+$colors: (
+    --background-primary-color: ( $background-primary-color, $background-primary-color-dark),
+    --text-primary-color: ( $text-primary-color, $text-primary-color-dark),
+    --elements-primary-color: ( $elements-primary-color, $elements-primary-color-dark ),
+    --load-primary-color: ( $load-primary-color, $load-primary-color-dark)
+    // --input-primary-color: ( $input-primary-color, $input-primary-color-dark),
+    // --shadow-primary-color: ( $shadow-primary-color, $shadow-primary-color-dark),
+    // --loading-primary-color: ( $loading-primary-color, $loading-primary-color-dark)
+
+);
+
+

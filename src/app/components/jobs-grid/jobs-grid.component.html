@@ -1,0 +1,19 @@
+
+<section class="card-content">
+    <div class="card"
+        *ngFor="let job of jobs"
+        (click)="viewJob( job.id )"
+        >
+        <div 
+        class="card__logo"
+        appChangeColor
+        >
+        <h3 class="text__logo">{{job.company | slice:0:1 | uppercase}}</h3>
+        </div>
+      <p class="text__time ">{{ job.created_at | createdAt }} . {{ job.type}}</p>
+      <h3 class="text__position">{{ job.title | sliceText }}</h3>
+      <p class="text__company">{{ job.company | sliceText }}</p>
+      <p class="text__direction">{{ job.location }}</p>
+
+    </div>
+</section>

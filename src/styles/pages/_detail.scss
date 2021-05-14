@@ -1,0 +1,218 @@
+@import 'abstracs/variables';
+@import 'abstracs/mixins';
+
+main {
+
+     /* Position */
+ 
+     // Display & boxModel
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 1.5rem;
+
+
+    // Visual
+}
+
+.prin-Info {
+
+   /*Position*/
+   position: relative;
+
+   display: flex;
+   justify-content: center;
+   width: 100%;
+
+   .pos {
+       position: absolute;
+       top: -40px;
+
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        margin: inherit;
+   
+
+        /* Visual */
+        background-color: var(--elements-primary-color);
+        border-radius: 5px;
+
+
+
+
+
+
+    .img__logo {
+
+        position: absolute;
+        top: -30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        padding: 0.5rem;
+
+
+
+        border-radius: 10px;
+
+
+        .logo {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+           object-position: center center;
+
+            
+        }
+    }
+
+    .company__info {
+        margin-top: 6.5rem;
+       
+      
+        .text__company {
+            text-align: center;
+            @include base-cardText(var(--text-primary-color), kumbhBold);
+            
+        }
+
+        .text__site {
+            text-align: center;
+            
+            @include base-cardText($gray--dark, inherit );
+
+        }
+
+       
+    }
+
+    .company__btn {
+        @include base-Linkbtn(15px, 15px, $viloet, $gray);
+        margin-bottom: 1.5rem;
+    }
+
+   }
+
+
+}
+
+
+.info {
+    
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 15.5rem;
+    padding: 1rem;
+
+    background-color: var(--elements-primary-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    &__job {
+        flex: 1 1 300px;
+        .text__time {
+            @include base-cardText($gray--dark, inherit );
+        }
+    
+
+        .text__position {
+         @include base-cardText(var(--text-primary-color), kumbhBold);
+        }
+
+        .text__direction {
+            @include base-cardText( $viloet, kumbhBold);
+        }
+
+    }
+
+    &__btn {
+        flex: 1 1 100px;
+
+        width: 100%;
+        @include base-Linkbtn(15px, 15px, $gray--light, $viloet);
+
+    }
+}
+
+.requirements {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+
+    color: $gray;
+
+}
+
+.apply {
+
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem 0;    
+    padding: 1rem;
+
+    color: $gray--light;
+
+    background-image: url('../../assets/images/desktop/bg-pattern-detail-footer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+
+    .text__apply {
+        @include base-cardText(var($gray--light), kumbhBold);
+
+    }
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    
+    background-color: var(--elements-primary-color);
+}
+
+.footer {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+
+
+    .info__job {
+        display: none;
+
+        .text__position {
+            @include base-cardText(var(--text-primary-color), kumbhBold);
+        }
+
+        .text__direction {
+            @include base-cardText($gray--dark, inherit );
+        }
+    }
+
+    .info__btn {
+
+        flex: 1 1 50px;
+    }
+}
+
+.disabled-link {
+    pointer-events: none;
+    
+   
+}

@@ -1,0 +1,31 @@
+
+<div class="modal"
+    appCloseModal
+    (active)="modalActiveChanged.emit($event)"
+     [ngClass]="{'modal--show': modalActive}">
+    <form class="modal__content" [formGroup]="forma" (ngSubmit)="submit()">
+        <div class="filter-search">
+            <span class="filter-search__icon"><i class="fas fa-map-marker-alt"></i></span>
+            <input class="filter-search__input" 
+                   type="search" 
+                   placeholder="Filter by location..."
+                   formControlName="location"
+                  >
+        </div>
+        <div class="filter-search filter-search--nBorder">
+
+            <div class="checkbox-container">
+                <label class="container">
+                    <input type="checkbox"
+                     formControlName="fullTime"
+                     >
+                    <span class="checkmark"></span>
+                </label>
+                <label class="filter-search__text">Full time Only</label>
+            </div>
+            <button class="filter-search__btn"
+                    type="submit"
+                    >Search</button>
+        </div>
+    </form>
+</div>
